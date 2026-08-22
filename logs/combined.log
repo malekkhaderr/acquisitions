@@ -335,3 +335,7 @@
 {"level":"info","message":"::1 - - [22/Aug/2026:01:41:56 +0000] \"POST /api/auth/sign-in?name=malek&email=malekkhader%40outlook.com&password=Aa%4012345 HTTP/1.1\" 500 567 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2026-08-22T01:41:56.744Z"}
 {"level":"info","message":"User malekkhader1@outlook.com signed in successfully","service":"acquisitions-api","timestamp":"2026-08-22T01:45:54.611Z"}
 {"level":"info","message":"::1 - - [22/Aug/2026:01:45:54 +0000] \"POST /api/auth/sign-in?name=malek&email=malekkhader%40outlook.com&password=Aa%4012345 HTTP/1.1\" 200 116 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2026-08-22T01:45:54.626Z"}
+{"level":"info","message":"User malekkhader1@outlook.com signed in successfully","service":"acquisitions-api","timestamp":"2026-08-22T18:15:54.879Z"}
+{"level":"info","message":"::1 - - [22/Aug/2026:18:15:54 +0000] \"POST /api/auth/sign-in?name=malek&email=malekkhader%40outlook.com&password=Aa%4012345 HTTP/1.1\" 200 116 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2026-08-22T18:15:54.886Z"}
+{"level":"info","message":"User signed out successfully","service":"acquisitions-api","timestamp":"2026-08-22T18:16:11.361Z"}
+{"level":"info","message":"::1 - - [22/Aug/2026:18:16:11 +0000] \"POST /api/auth/sign-out?name=malek&email=malekkhader%40outlook.com&password=Aa%4012345 HTTP/1.1\" 200 37 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2026-08-22T18:16:11.364Z"}
