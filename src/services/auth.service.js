@@ -12,7 +12,7 @@ export const hashedPassword = async password => {
   }
 };
 
-export const comparePassword = async ({ password, hashedPassword }) => {
+export const comparePassword = async (password, hashedPassword) => {
   try {
     return await bcrypt.compare(password, hashedPassword);
   } catch (error) {
@@ -55,4 +55,21 @@ export const createUser = async ({ name, email, password, role = 'user' }) => {
   }
 };
 
-export const signIn = async ({ email, password }) => {};
+export const authenticateUser = async ({ email, password }) => {
+  try {
+    const existingUser = await userExisted(email);
+    if (!existingUser.length) {
+      throw new Error('User is not Existed, Please create a user');
+    }
+    const isMatch = await comparePassword(password, existingUser[0].password);
+
+    if (!isMatch) {
+      throw new Error('Invalid credentials');
+    }
+
+    return existingUser[0];
+  } catch (error) {
+    logger.error('Error when authenticating user', error);
+    throw error;
+  }
+};
